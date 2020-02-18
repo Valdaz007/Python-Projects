@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <form action = "/create" method = "POST">
+        <fieldset>
+            <legend>Post Somthing</legend>
+            <div id = "formContact"><br/>
+                <div id = "label"><label id = "label">Author</label></div>
+                <input type = "text" name = "author" /> <br/><br/>
+                <div id = "label"><label id = "label">Title</label></div>
+                <input type = "text" name = "title" /> <br/><br/>
+                <div id = "label"><label id = "label">Content</label></div>
+                <textarea name = "content" cols = "22"></textarea><br/><br/>
+                <input type = "submit" value = "Submit" class = "btn"/>
+            </div>
+        </fieldset>
+    </form>
+{% endblock content %}

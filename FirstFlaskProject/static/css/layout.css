@@ -1,0 +1,40 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    height: 100px;
+}
+
+header h1 {
+    text-align: center;
+    padding: 0;
+    transform: translateY(5px);
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+form fieldset #formContact {
+    width: 150px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+form fieldset #formContact #label {
+    text-align: left;
+}
+
+
