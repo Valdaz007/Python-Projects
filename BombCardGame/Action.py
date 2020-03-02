@@ -9,3 +9,4 @@ def dealtCard(player, deck, num):
 def played(player, card):
     return player.getCard(card)
 
+
