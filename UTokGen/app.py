@@ -1,10 +1,6 @@
-import csv
-import random
+import csv, random
 
-line1 = []
-line2 = []
-line3 = []
-line4 = []
+dictLine = {1:[], 2:[], 3:[], 4:[]}
 
 def randomNum():
 	return random.randrange(0, 18, 1)
@@ -12,20 +8,16 @@ def randomNum():
 def get_data():
 	with open("utokgen.csv", "r") as file:
 		reader = csv.DictReader(file)
-		
 		for row in reader:
-			line1.append(row["line1"])
-			line2.append(row["line2"])
-			line3.append(row["line3"])
-			line4.append(row["line4"])
+			for i in range(1,5):
+				dictLine[i].append(row[f"line{i}"])
 
 def utokgen():
-	print(line1[randomNum()], line2[randomNum()], line3[randomNum()], line4[randomNum()], sep=" ")
+	print(dictLine[1][randomNum()], dictLine[2][randomNum()], dictLine[3][randomNum()], dictLine[4][randomNum()], sep=" ")
 
 def main():
 	get_data()
 	utokgen()
-
 
 if __name__ == "__main__":
 	main()
