@@ -1,19 +1,14 @@
-import csv, random
+import random as rd
+import pandas as pd
 
-dictLine = {1:[], 2:[], 3:[], 4:[]}
-
-def randomNum():
-	return random.randrange(0, 18, 1)
+def rdNum() -> int:
+	return rd.randrange(0, 18)
 
 def get_data():
-	with open("utokgen.csv", "r") as file:
-		reader = csv.DictReader(file)
-		for row in reader:
-			for i in range(1,5):
-				dictLine[i].append(row[f"line{i}"])
+	df = pd.read_csv('utokgen.csv')
 
 def utokgen():
-	print(dictLine[1][randomNum()], dictLine[2][randomNum()], dictLine[3][randomNum()], dictLine[4][randomNum()], sep=" ")
+	print(df['line1'][rdNum()], df['line2'][rdNum()], df['line3'][rdNum()], df['line4'][rdNum()], sep=" ")
 
 def main():
 	get_data()
