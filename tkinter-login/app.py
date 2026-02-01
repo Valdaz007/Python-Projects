@@ -1,10 +1,12 @@
 import tkinter as tk
+from tkinter import messagebox as msgbox
 
 def btnLogin():
     if(inp_uname.get()=='valdaz' and inp_upwd.get()=='1234'):
-        print('Login: Successful')
-    else:
-        print('Login: Invalid')
+        msgbox.showinfo(title='Login Validation', message='Login Successful')
+    else:        
+        msgbox.showerror(title='Login Validation', message='Login Invalid')
+
 
 wdw = tk.Tk()
 
